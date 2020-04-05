@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM.BL", "SCM.BL\SCM.BL.csproj", "{3A670EEF-1A7A-4671-ADF3-5402F76B0EC8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{6FDB274F-8AA2-4AF1-9702-0DD71FE226CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM.BL.Test", "SCM.BL.Test\SCM.BL.Test.csproj", "{D0195313-B8C3-46CF-AC9D-988592D41E47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +17,12 @@ Global
 		{3A670EEF-1A7A-4671-ADF3-5402F76B0EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A670EEF-1A7A-4671-ADF3-5402F76B0EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A670EEF-1A7A-4671-ADF3-5402F76B0EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0195313-B8C3-46CF-AC9D-988592D41E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0195313-B8C3-46CF-AC9D-988592D41E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0195313-B8C3-46CF-AC9D-988592D41E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0195313-B8C3-46CF-AC9D-988592D41E47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D0195313-B8C3-46CF-AC9D-988592D41E47} = {6FDB274F-8AA2-4AF1-9702-0DD71FE226CA}
 	EndGlobalSection
 EndGlobal
