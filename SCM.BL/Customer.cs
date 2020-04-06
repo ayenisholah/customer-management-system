@@ -1,9 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SCM.BL
 {
     public class Customer
     {
+        public Customer()
+        {
+
+        }
+
+        public Customer(int customerId)
+        {
+            CustomerId = customerId;
+        }
         public int CustomerId
         {
             get;
@@ -30,5 +40,38 @@ namespace SCM.BL
             }
         }
         public static int InstanceCount { get; set; }
+
+        public bool Validate()
+        {
+            var isValid = true;
+
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+
+            return isValid;
+
+        }
+
+        public bool Save()
+        {
+            //code that saves the defined user
+
+            return true;
+        }
+
+        public Customer Retrieve(int customerId)
+        {
+            // code that retrieves the defined customer
+
+            return new Customer();
+        }
+
+        public List<Customer> Retrieve()
+        {
+            // code that retrieves all customers
+
+            return new List<Customer>();
+        }
+
     }
 }
