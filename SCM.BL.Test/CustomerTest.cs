@@ -4,13 +4,45 @@ using Xunit;
 namespace SCM.BL.Test
 {
     public class CustomerTest
-t
- {
+    {
         [Fact]
-        public void Test1()
-           Assert.Equal(expected, actual);
+        public void ValidateValid()
+        {
+            // arrange
+            var customer = new Customer
+            {
+                LastName = "Ayeni",
+                EmailAddress = "ayenisholah@yahoo.com"
+            };
+
+            var expected = true;
+            // act
+
+            var actual = customer.Validate();
+            // assert
+
+            Assert.Equal(expected, actual);
+
         }
 
+        [Fact]
+        public void ValidateMissingLastName()
+        {
+            // arrange
+            var customer = new Customer
+            {
+                EmailAddress = "ayenisholah@yahoo.com"
+            };
+
+            var expected = false;
+            // act
+
+            var actual = customer.Validate();
+            // assert
+
+            Assert.Equal(expected, actual);
+
+        }
         [Fact]
         public void StaticTest()
         {
@@ -28,15 +60,6 @@ t
             Customer.InstanceCount += 1;
 
             //act
-
-            //assert
-            Assert.Equal(3, Customer.InstanceCount);
-        }
-    }
-}
-
-
-   //act
 
             //assert
             Assert.Equal(3, Customer.InstanceCount);
