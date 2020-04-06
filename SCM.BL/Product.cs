@@ -27,20 +27,6 @@ namespace SCM.BL
 
         }
 
-        public bool Save()
-        {
-            //code that saves the defined product
-
-            return true;
-        }
-
-        public Product Retrieve(int productId)
-        {
-            // code that retrieves the defined product
-
-            return new Product();
-        }
-
         public List<Product> Retrieve()
         {
             // code that retrieves all products
