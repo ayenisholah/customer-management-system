@@ -19,14 +19,6 @@ namespace SCM.BL
             // code that retrieves the specified order
             return new Order();
         }
-
-        public bool Save()
-        {
-            // code that saves order
-
-            return true;
-        }
-
         public bool Validate()
         {
             var isValid = true;
