@@ -51,27 +51,5 @@ namespace SCM.BL
             return isValid;
 
         }
-
-        public bool Save()
-        {
-            //code that saves the defined user
-
-            return true;
-        }
-
-        public Customer Retrieve(int customerId)
-        {
-            // code that retrieves the defined customer
-
-            return new Customer();
-        }
-
-        public List<Customer> Retrieve()
-        {
-            // code that retrieves all customers
-
-            return new List<Customer>();
-        }
-
     }
 }
