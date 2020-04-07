@@ -1,11 +1,16 @@
 ﻿using System;
+using System.Linq;
+
 namespace SCM.BL
 {
     public class CustomerRepository
     {
+
         public CustomerRepository()
         {
+            addressRepository = new AddressRepository();
         }
+        private AddressRepository addressRepository { get; set; }
 
         public Customer Retrieve(int customerId)
         {
@@ -22,6 +27,7 @@ namespace SCM.BL
                 customer.EmailAddress = "ayenisholah@yahoo.com";
                 customer.FirstName = "Shola";
                 customer.LastName = "Ayeni";
+                customer.AddressList = addressRepository.RetrieveByCustomerId(customerId).ToList();
             }
             return customer;
 
