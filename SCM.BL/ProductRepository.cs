@@ -31,11 +31,31 @@ namespace SCM.BL
             return product;
         }
 
-        public bool Save()
+        public bool Save(Product product)
         {
             // code that retrieves saved product
+            var success = true;
 
-            return true;
+            if (product.HasChanges)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    {
+                        // call an insert store procedure
+                    }
+                    else
+                    {
+                        // call an update store procedure
+                    }
+                }
+                else
+                {
+                    success = true;
+                }
+            }
+
+            return success;
         }
     }
 }
