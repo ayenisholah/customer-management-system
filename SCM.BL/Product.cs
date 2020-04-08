@@ -20,7 +20,7 @@ namespace SCM.BL
 
         public override string ToString() => ProductName;
 
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
             if (string.IsNullOrWhiteSpace(ProductName)) isValid = false;
