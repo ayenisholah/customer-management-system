@@ -13,11 +13,7 @@ namespace SCM.BL
         public bool HasChanges { get; set; }
         public bool IsValid
         {
-            get
-            {
-                return true;
-            }
+            get { return true; }
         }
     }
 }
-

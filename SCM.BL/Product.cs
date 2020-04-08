@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SCM.BL
 {
-    public class Product
+    public class Product : EntityBase
     {
         public Product()
         {
