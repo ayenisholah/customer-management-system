@@ -16,6 +16,17 @@ namespace SCM.BL
         public decimal? CurrentPrice { get; set; }
         public string ProductDescription { get; set; }
         public int ProductId { get; set; }
+        private string _productName
+        {
+            get
+            {
+                return _productName;
+            }
+            set
+            {
+                _productName = value;
+            }
+        }
         public string ProductName { get; set; }
 
         public override string ToString() => ProductName;
